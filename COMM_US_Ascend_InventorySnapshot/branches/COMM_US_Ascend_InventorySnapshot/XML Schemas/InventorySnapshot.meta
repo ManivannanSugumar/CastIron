@@ -1,0 +1,17 @@
+<com.approuter.studio.repository.model.EntryMetaData>
+  <__metaData>
+    <properties>
+      <entry>
+        <string>variables</string>
+        <list>
+          <string>InventorySnapshotRequest</string>
+          <string>InventorySnapshotResponse</string>
+        </list>
+      </entry>
+    </properties>
+  </__metaData>
+  <__namespace>http://www.approuter.com/schemas/2003/1/xmlschema/</__namespace>
+  <__valid>true</__valid>
+  <__hidden>false</__hidden>
+  <__guid>5E6ED7B5B8AA82B9EFF76B3B3ED710D3</__guid>
+</com.approuter.studio.repository.model.EntryMetaData>

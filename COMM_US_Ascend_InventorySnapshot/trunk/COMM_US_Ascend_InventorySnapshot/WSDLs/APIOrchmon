@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document><main name="APIOrchmon.wsdl" type="http://www.approuter.com/schemas/2003/1/wsdl/"><definitions name="OrcMonManager" targetNamespace="http://www.approuter.com/schemas/2008/1/orcmon" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.approuter.com/schemas/2008/1/orcmon" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<types>
+		<xsd:schema>
+			<xsd:import namespace="http://www.approuter.com/schemas/2008/1/orcmon" schemaLocation="orcmon_xsd=1"/></xsd:schema><xsd:schema>
+			<xsd:import namespace="http://www.approuter.com/schemas/2008/1/lognotif/types" schemaLocation="orcmon_xsd=2"/></xsd:schema><xsd:schema>
+			<xsd:import namespace="http://www.approuter.com/schemas/2005/1/monitoringProps/" schemaLocation="orcmon_xsd=3"/></xsd:schema><xsd:schema>
+			<xsd:import namespace="http://www.approuter.com/schemas/2004/1/orcmon/" schemaLocation="orcmon_xsd=4"/></xsd:schema><xsd:schema>
+			<xsd:import namespace="http://www.approuter.com/schemas/2004/1/orcmon" schemaLocation="orcmon_xsd=5"/></xsd:schema><xsd:schema>
+			<xsd:import namespace="http://www.approuter.com/schema/router/1000/logging.xsd" schemaLocation="orcmon_xsd=6"/></xsd:schema></types><message name="getMonitoringProperties">
+		<part element="tns:getMonitoringProperties" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getMonitoringPropertiesResponse">
+		<part element="tns:getMonitoringPropertiesResponse" name="result"/></message><message name="Exception">
+		<part element="tns:Exception" name="fault"/></message><message name="setMonitoringProperties">
+		<part element="tns:setMonitoringProperties" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="setMonitoringPropertiesResponse">
+		<part element="tns:setMonitoringPropertiesResponse" name="result"/></message><message name="getJobCount">
+		<part element="tns:getJobCount" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getJobCountResponse">
+		<part element="tns:getJobCountResponse" name="result"/></message><message name="searchJobs">
+		<part element="tns:searchJobs" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="searchJobsResponse">
+		<part element="tns:searchJobsResponse" name="result"/></message><message name="purgeJobs">
+		<part element="tns:purgeJobs" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="purgeJobsResponse">
+		<part element="tns:purgeJobsResponse" name="result"/></message><message name="getVariableData">
+		<part element="tns:getVariableData" name="parameters"/></message><message name="getVariableDataResponse">
+		<part element="tns:getVariableDataResponse" name="parameters"/></message><message name="getJobDetails">
+		<part element="tns:getJobDetails" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getJobDetailsResponse">
+		<part element="tns:getJobDetailsResponse" name="result"/></message><portType name="OrcMonManager">
+		<operation name="getMonitoringProperties" parameterOrder="parameters sessionId">
+			<input message="tns:getMonitoringProperties"/><output message="tns:getMonitoringPropertiesResponse"/><fault message="tns:Exception" name="Exception"/></operation><operation name="setMonitoringProperties" parameterOrder="parameters sessionId">
+			<input message="tns:setMonitoringProperties"/><output message="tns:setMonitoringPropertiesResponse"/><fault message="tns:Exception" name="Exception"/></operation><operation name="getJobCount" parameterOrder="parameters sessionId">
+			<input message="tns:getJobCount"/><output message="tns:getJobCountResponse"/></operation><operation name="searchJobs" parameterOrder="parameters sessionId">
+			<input message="tns:searchJobs"/><output message="tns:searchJobsResponse"/></operation><operation name="purgeJobs" parameterOrder="parameters sessionId">
+			<input message="tns:purgeJobs"/><output message="tns:purgeJobsResponse"/></operation><operation name="getVariableData">
+			<input message="tns:getVariableData"/><output message="tns:getVariableDataResponse"/><fault message="tns:Exception" name="Exception"/></operation><operation name="getJobDetails" parameterOrder="parameters sessionId">
+			<input message="tns:getJobDetails"/><output message="tns:getJobDetailsResponse"/><fault message="tns:Exception" name="Exception"/></operation></portType><binding name="OrcMonManagerPortBinding" type="tns:OrcMonManager">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/><operation name="getMonitoringProperties">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getMonitoringProperties" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output><fault name="Exception">
+				<soap:fault name="Exception" use="literal"/></fault></operation><operation name="setMonitoringProperties">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:setMonitoringProperties" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output><fault name="Exception">
+				<soap:fault name="Exception" use="literal"/></fault></operation><operation name="getJobCount">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getJobCount" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="searchJobs">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:searchJobs" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="purgeJobs">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:purgeJobs" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getVariableData">
+			<soap:operation soapAction=""/><input>
+				<soap:body use="literal"/></input><output>
+				<soap:body use="literal"/></output><fault name="Exception">
+				<soap:fault name="Exception" use="literal"/></fault></operation><operation name="getJobDetails">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getJobDetails" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output><fault name="Exception">
+				<soap:fault name="Exception" use="literal"/></fault></operation></binding><service name="OrcMonManager">
+		<port binding="tns:OrcMonManagerPortBinding" name="OrcMonManagerPort">
+			<soap:address location="https://10.30.70.174:443/ws/orcmon"/></port></service></definitions></main><include name="orcmon_xsd=6" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema elementFormDefault="qualified" targetNamespace="http://www.approuter.com/schema/router/1000/logging.xsd" version="1.0" xmlns:tns="http://www.approuter.com/schema/router/1000/logging.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="Event">
+<xs:sequence>
+<xs:element name="eventId" type="xs:int"/><xs:element name="moduleId" type="xs:int"/><xs:element name="level" type="xs:int"/><xs:element name="eventTime" type="xs:dateTime"/><xs:element maxOccurs="unbounded" minOccurs="0" name="args" nillable="true" type="tns:Argument"/></xs:sequence></xs:complexType><xs:complexType name="Argument">
+<xs:sequence>
+<xs:element name="type" type="xs:int"/><xs:element name="value" type="xs:string"/></xs:sequence></xs:complexType></xs:schema></include><include name="orcmon_xsd=4" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema elementFormDefault="qualified" targetNamespace="http://www.approuter.com/schemas/2004/1/orcmon/" version="1.0" xmlns:ns1="http://www.approuter.com/schema/router/1000/logging.xsd" xmlns:tns="http://www.approuter.com/schemas/2004/1/orcmon/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:import namespace="http://www.approuter.com/schema/router/1000/logging.xsd" schemaLocation="orcmon_xsd=6"/><xs:complexType name="LoggedEventType">
+<xs:sequence>
+<xs:element minOccurs="0" name="taskStartLoggedEvent" type="tns:TaskStartLoggedEventType"/><xs:element minOccurs="0" name="taskEndLoggedEvent" type="tns:TaskEndLoggedEventType"/><xs:element minOccurs="0" name="activityStartLoggedEvent" type="tns:ActivityStartLoggedEventType"/><xs:element minOccurs="0" name="activityEndLoggedEvent" type="tns:ActivityEndLoggedEventType"/><xs:element minOccurs="0" name="saveVarsLoggedEvent" type="tns:SaveVarsLoggedEventType"/><xs:element minOccurs="0" name="activityEventLoggedEvent" type="tns:ActivityEventLoggedEventType"/><xs:element minOccurs="0" name="setStatusLoggedEvent" type="tns:SetStatusLoggedEventType"/><xs:element minOccurs="0" name="saveKeyLoggedEvent" type="tns:SaveKeyLoggedEventType"/></xs:sequence></xs:complexType><xs:complexType name="TaskStartLoggedEventType">
+<xs:sequence>
+<xs:element name="taskId" type="xs:string"/><xs:element name="sequenceNumber" type="xs:int"/><xs:element name="time" type="xs:dateTime"/></xs:sequence></xs:complexType><xs:complexType name="TaskEndLoggedEventType">
+<xs:sequence>
+<xs:element name="taskId" type="xs:string"/><xs:element name="sequenceNumber" type="xs:int"/><xs:element name="time" type="xs:dateTime"/></xs:sequence></xs:complexType><xs:complexType name="ActivityStartLoggedEventType">
+<xs:sequence>
+<xs:element name="taskId" type="xs:string"/><xs:element name="sequenceNumber" type="xs:int"/><xs:element minOccurs="0" name="activityPath" type="xs:string"/><xs:element name="activityId" type="xs:int"/><xs:element name="time" type="xs:dateTime"/></xs:sequence></xs:complexType><xs:complexType name="ActivityEndLoggedEventType">
+<xs:sequence>
+<xs:element name="taskId" type="xs:string"/><xs:element name="sequenceNumber" type="xs:int"/><xs:element minOccurs="0" name="activityPath" type="xs:string"/><xs:element name="activityId" type="xs:int"/><xs:element name="time" type="xs:dateTime"/></xs:sequence></xs:complexType><xs:complexType name="SaveVarsLoggedEventType">
+<xs:sequence>
+<xs:element name="taskId" type="xs:string"/><xs:element name="sequenceNumber" type="xs:int"/><xs:element minOccurs="0" name="activityPath" type="xs:string"/><xs:element name="activityId" type="xs:int"/><xs:element maxOccurs="unbounded" name="variableName" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="ActivityEventLoggedEventType">
+<xs:sequence>
+<xs:element name="taskId" type="xs:string"/><xs:element name="sequenceNumber" type="xs:int"/><xs:element minOccurs="0" name="activityPath" type="xs:string"/><xs:element name="activityId" type="xs:int"/><xs:element name="event" type="ns1:Event"/></xs:sequence></xs:complexType><xs:complexType name="SetStatusLoggedEventType">
+<xs:sequence>
+<xs:element name="taskId" type="xs:string"/><xs:element name="sequenceNumber" type="xs:int"/><xs:element name="status" type="xs:int"/></xs:sequence></xs:complexType><xs:complexType name="SaveKeyLoggedEventType">
+<xs:sequence>
+<xs:element name="taskId" type="xs:string"/><xs:element name="sequenceNumber" type="xs:int"/><xs:element name="key" type="tns:KeyValue"/></xs:sequence></xs:complexType><xs:complexType name="KeyValue">
+<xs:sequence>
+<xs:element name="value" type="xs:string"/></xs:sequence><xs:attribute name="name" type="xs:string"/><xs:attribute name="isPrimary" type="xs:boolean"/></xs:complexType></xs:schema></include><include name="orcmon_xsd=2" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema targetNamespace="http://www.approuter.com/schemas/2008/1/lognotif/types" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="logLevel">
+<xs:restriction base="xs:string">
+<xs:enumeration value="critical"/><xs:enumeration value="error"/><xs:enumeration value="warning"/><xs:enumeration value="info"/><xs:enumeration value="all"/></xs:restriction></xs:simpleType></xs:schema></include><include name="orcmon_xsd=5" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema elementFormDefault="qualified" targetNamespace="http://www.approuter.com/schemas/2004/1/orcmon" version="1.0" xmlns:ns1="http://www.approuter.com/schemas/2004/1/orcmon/" xmlns:ns2="http://www.approuter.com/schemas/2008/1/lognotif/types" xmlns:tns="http://www.approuter.com/schemas/2004/1/orcmon" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:import namespace="http://www.approuter.com/schemas/2004/1/orcmon/" schemaLocation="orcmon_xsd=4"/><xs:import namespace="http://www.approuter.com/schemas/2008/1/lognotif/types" schemaLocation="orcmon_xsd=2"/><xs:complexType name="orcMonJob">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="event" type="tns:orcMonKeyForEvents"/><xs:element maxOccurs="unbounded" minOccurs="0" name="key" type="tns:orcMonKeyForKeys"/></xs:sequence><xs:attribute name="endTime" type="xs:dateTime"/><xs:attribute name="id" type="xs:string"/><xs:attribute name="path" type="xs:string"/><xs:attribute name="startTime" type="xs:dateTime"/><xs:attribute name="status" type="xs:int" use="required"/></xs:complexType><xs:complexType name="orcMonKeyForEvents">
+<xs:sequence>
+<xs:element name="eventType" type="ns1:LoggedEventType"/><xs:element maxOccurs="unbounded" minOccurs="0" name="variable" type="tns:orcMonKeyForVariables"/></xs:sequence><xs:attribute name="seqNum" type="xs:int" use="required"/></xs:complexType><xs:complexType name="orcMonKeyForVariables">
+<xs:sequence>
+<xs:element name="value" type="xs:string"/></xs:sequence><xs:attribute name="name" type="xs:string"/></xs:complexType><xs:complexType name="orcMonKeyForKeys">
+<xs:sequence>
+<xs:element name="value" type="xs:string"/></xs:sequence><xs:attribute name="isPrimary" type="xs:boolean" use="required"/><xs:attribute name="name" type="xs:string"/></xs:complexType><xs:complexType name="orcMonEventWrapper">
+<xs:sequence>
+<xs:element name="activityId" type="xs:int"/><xs:element minOccurs="0" name="activityName" type="xs:string"/><xs:element minOccurs="0" name="defaultName" type="xs:string"/><xs:element minOccurs="0" name="description" type="xs:string"/><xs:element minOccurs="0" name="elapsedTime" type="xs:string"/><xs:element minOccurs="0" name="endTime" type="xs:anySimpleType"/><xs:element maxOccurs="unbounded" minOccurs="0" name="events" type="tns:event"/><xs:element minOccurs="0" name="logLevel" type="ns2:logLevel"/><xs:element minOccurs="0" name="loggedEvent" type="ns1:LoggedEventType"/><xs:element minOccurs="0" name="moduleName" type="xs:string"/><xs:element minOccurs="0" name="name" type="xs:string"/><xs:element minOccurs="0" name="nodeName" type="xs:string"/><xs:element minOccurs="0" name="startTime" type="xs:anySimpleType"/><xs:element maxOccurs="unbounded" minOccurs="0" name="variables" type="ns1:SaveVarsLoggedEventType"/></xs:sequence></xs:complexType><xs:complexType name="event">
+<xs:sequence>
+<xs:element name="levelValue" type="xs:int"/><xs:element minOccurs="0" name="message" type="xs:string"/></xs:sequence></xs:complexType><xs:simpleType name="orcMonJobStatus">
+<xs:restriction base="xs:string">
+<xs:enumeration value="success"/><xs:enumeration value="errored"/><xs:enumeration value="running"/><xs:enumeration value="cancelling"/><xs:enumeration value="terminated"/><xs:enumeration value="cancelled"/><xs:enumeration value="suspended"/><xs:enumeration value="crashed"/><xs:enumeration value="suspending"/><xs:enumeration value="unknown"/><xs:enumeration value="all"/></xs:restriction></xs:simpleType></xs:schema></include><include name="orcmon_xsd=3" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema elementFormDefault="qualified" targetNamespace="http://www.approuter.com/schemas/2005/1/monitoringProps/" version="1.0" xmlns:tns="http://www.approuter.com/schemas/2005/1/monitoringProps/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="OrcMonPropsType">
+<xs:sequence>
+<xs:element minOccurs="0" name="purging" type="tns:PurgingType"/><xs:element minOccurs="0" name="archiving" type="tns:ArchivingType"/></xs:sequence><xs:attribute name="debug" type="xs:boolean"/></xs:complexType><xs:complexType name="PurgingType">
+<xs:sequence/><xs:attribute name="triggerPolling" type="xs:duration"/><xs:attribute name="diskFreeTrigger" type="xs:int"/><xs:attribute name="timeTriggerType" type="xs:string"/><xs:attribute name="timeTrigger" type="xs:duration"/><xs:attribute name="scheduledTriggerStart" type="xs:dateTime"/><xs:attribute name="scheduledTriggerPeriod" type="xs:int"/><xs:attribute name="scheduledTriggerPeriodUnit" type="xs:string"/><xs:attribute name="maxCompletedJobsTrigger" type="xs:int"/><xs:attribute name="maxErroredJobsTrigger" type="xs:int"/><xs:attribute name="jobType" type="xs:string"/><xs:attribute name="jobAge" type="xs:duration"/><xs:attribute name="jobCount" type="xs:int"/><xs:attribute name="compressionMode" type="xs:string"/><xs:attribute name="maxJobsCompressTrigger" type="xs:int"/><xs:attribute name="maxPercentRemainingJobsCompressTrigger" type="xs:int"/><xs:attribute name="diskFreeHighWaterMark" type="xs:int"/><xs:attribute name="waitAfterHighWaterMark" type="xs:duration"/></xs:complexType><xs:complexType name="ArchivingType">
+<xs:sequence/><xs:attribute name="fileExport" type="xs:boolean"/><xs:attribute name="fileReplace" type="xs:boolean"/><xs:attribute name="fileDir" type="xs:string"/><xs:attribute name="ftpExport" type="xs:boolean"/><xs:attribute name="ftpHost" type="xs:string"/><xs:attribute name="ftpPort" type="xs:int"/><xs:attribute name="ftpUsername" type="xs:string"/><xs:attribute name="ftpPassword" type="xs:string"/><xs:attribute name="ftpDir" type="xs:string"/><xs:attribute name="ftpExportUtilizationData" type="xs:boolean"/></xs:complexType></xs:schema></include><include name="orcmon_xsd=1" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema targetNamespace="http://www.approuter.com/schemas/2008/1/orcmon" version="1.0" xmlns:ns1="http://www.approuter.com/schemas/2004/1/orcmon" xmlns:ns2="http://www.approuter.com/schemas/2005/1/monitoringProps/" xmlns:tns="http://www.approuter.com/schemas/2008/1/orcmon" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:import namespace="http://www.approuter.com/schemas/2004/1/orcmon" schemaLocation="orcmon_xsd=5"/><xs:import namespace="http://www.approuter.com/schemas/2005/1/monitoringProps/" schemaLocation="orcmon_xsd=3"/><xs:element name="Exception" type="tns:Exception"/><xs:element name="getJobCount" type="tns:getJobCount"/><xs:element name="getJobCountResponse" type="tns:getJobCountResponse"/><xs:element name="getJobDetails" type="tns:getJobDetails"/><xs:element name="getJobDetailsResponse" type="tns:getJobDetailsResponse"/><xs:element name="getMonitoringProperties" type="tns:getMonitoringProperties"/><xs:element name="getMonitoringPropertiesResponse" type="tns:getMonitoringPropertiesResponse"/><xs:element name="getVariableData" type="tns:getVariableData"/><xs:element name="getVariableDataResponse" type="tns:getVariableDataResponse"/><xs:element name="purgeJobs" type="tns:purgeJobs"/><xs:element name="purgeJobsResponse" type="tns:purgeJobsResponse"/><xs:element name="searchJobs" type="tns:searchJobs"/><xs:element name="searchJobsResponse" type="tns:searchJobsResponse"/><xs:element name="sessionId" nillable="true" type="xs:string"/><xs:element name="setMonitoringProperties" type="tns:setMonitoringProperties"/><xs:element name="setMonitoringPropertiesResponse" type="tns:setMonitoringPropertiesResponse"/><xs:complexType name="getJobCount">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="projectName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="version" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="configName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="orchName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="jobId" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="jobKey" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="minStartDate" type="xs:dateTime"/><xs:element form="qualified" minOccurs="0" name="maxStartDate" type="xs:dateTime"/><xs:element form="qualified" minOccurs="0" name="status" type="ns1:orcMonJobStatus"/></xs:sequence></xs:complexType><xs:complexType name="getJobCountResponse">
+<xs:sequence>
+<xs:element form="qualified" name="jobCount" type="xs:int"/></xs:sequence></xs:complexType><xs:complexType name="getMonitoringProperties">
+<xs:sequence/></xs:complexType><xs:complexType name="getMonitoringPropertiesResponse">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="properties" type="ns2:OrcMonPropsType"/></xs:sequence></xs:complexType><xs:complexType name="Exception">
+<xs:sequence>
+<xs:element minOccurs="0" name="message" type="xs:string"/><xs:element maxOccurs="unbounded" minOccurs="0" name="suppressed" nillable="true" type="tns:throwable"/></xs:sequence></xs:complexType><xs:complexType name="throwable">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="stackTrace" nillable="true" type="tns:stackTraceElement"/></xs:sequence></xs:complexType><xs:complexType final="extension restriction" name="stackTraceElement">
+<xs:sequence/></xs:complexType><xs:complexType name="getVariableData">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="jobId" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="activityId" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="name" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getVariableDataResponse">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="data" type="xs:base64Binary"/></xs:sequence></xs:complexType><xs:complexType name="setMonitoringProperties">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="properties" type="ns2:OrcMonPropsType"/></xs:sequence></xs:complexType><xs:complexType name="setMonitoringPropertiesResponse">
+<xs:sequence>
+<xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="messages" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="searchJobs">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="projectName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="version" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="configName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="orchName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="jobId" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="jobKey" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="minStartDate" type="xs:dateTime"/><xs:element form="qualified" minOccurs="0" name="maxStartDate" type="xs:dateTime"/><xs:element form="qualified" minOccurs="0" name="status" type="ns1:orcMonJobStatus"/><xs:element form="qualified" name="page" type="xs:int"/><xs:element form="qualified" name="pageSize" type="xs:int"/></xs:sequence></xs:complexType><xs:complexType name="searchJobsResponse">
+<xs:sequence>
+<xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="jobs" type="ns1:orcMonJob"/></xs:sequence></xs:complexType><xs:complexType name="getJobDetails">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="jobId" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getJobDetailsResponse">
+<xs:sequence>
+<xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="events" type="ns1:orcMonEventWrapper"/></xs:sequence></xs:complexType><xs:complexType name="purgeJobs">
+<xs:sequence>
+<xs:element form="qualified" minOccurs="0" name="projectName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="version" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="configName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="orchName" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="jobId" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="jobKey" type="xs:string"/><xs:element form="qualified" minOccurs="0" name="minStartDate" type="xs:dateTime"/><xs:element form="qualified" minOccurs="0" name="maxStartDate" type="xs:dateTime"/><xs:element form="qualified" minOccurs="0" name="status" type="ns1:orcMonJobStatus"/><xs:element form="qualified" name="exportJobs" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="purgeJobsResponse">
+<xs:sequence>
+<xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="jobs" type="ns1:orcMonJob"/></xs:sequence></xs:complexType></xs:schema></include></document>
