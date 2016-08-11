@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document><main name="MessageViewerWSDL.wsdl" type="http://www.approuter.com/schemas/2003/1/wsdl/"><wsdl:definitions name="Provide_Service" targetNamespace="http://www.approuter.com/connectors/wsdl" xmlns="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.approuter.com/connectors/wsdl" xmlns:tns1="http://www.monsanto.com/MessageViewer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.monsanto.com/MessageViewer" xmlns:tns="http://www.monsanto.com/MessageViewer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="MessageViewer">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="System">
+							<xs:annotation>
+								<xs:documentation>datapower/castiron</xs:documentation></xs:annotation><xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="datapower"/><xs:enumeration value="castiron"/></xs:restriction></xs:simpleType></xs:element><xs:element name="Layer">
+							<xs:annotation>
+								<xs:documentation>internal/external</xs:documentation></xs:annotation><xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="internal"/><xs:enumeration value="external"/></xs:restriction></xs:simpleType></xs:element><xs:element name="ServiceName">
+							<xs:annotation>
+								<xs:documentation>In DataPower this will be the Web Service Proxy name or multi-protocol gateway</xs:documentation></xs:annotation><xs:simpleType>
+								<xs:restriction base="xs:string"/></xs:simpleType></xs:element><xs:element name="TransactionMessageID" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>uuid</xs:documentation></xs:annotation></xs:element><xs:element name="SystemMessageID" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>This is the system specific message id. This is not the UUID shared between systems.</xs:documentation></xs:annotation></xs:element><xs:element name="MessageDateTime" type="xs:dateTime">
+							<xs:annotation>
+								<xs:documentation>Format: 2002-05-30T09:30:10-06:00</xs:documentation></xs:annotation></xs:element><xs:element name="LogType">
+							<xs:annotation>
+								<xs:documentation>request/response</xs:documentation></xs:annotation><xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="request"/><xs:enumeration value="response"/></xs:restriction></xs:simpleType></xs:element><xs:element minOccurs="0" name="IncomingUserName" type="xs:string"/><xs:element minOccurs="0" name="Generic1" type="xs:string"/><xs:element minOccurs="0" name="Generic2" type="xs:string"/><xs:element minOccurs="0" name="Generic3" type="xs:string"/><xs:element minOccurs="0" name="Generic4" type="xs:string"/><xs:element minOccurs="0" name="Generic5" type="xs:string"/><xs:element name="MessageBody" type="xs:string"/><xs:element minOccurs="0" name="DataPower">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="DomainName"/><xs:element name="RuleName"/><xs:element name="UrlIn"/><xs:element name="UrlOut"/><xs:element minOccurs="0" name="ErrorCode"/><xs:element minOccurs="0" name="ErrorSubCode"/><xs:element minOccurs="0" name="PartnerID" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Used for B2B</xs:documentation></xs:annotation></xs:element><xs:element minOccurs="0" name="PartnerName" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Used for B2B</xs:documentation></xs:annotation></xs:element><xs:element minOccurs="0" name="DocumentID" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Used for B2B</xs:documentation></xs:annotation></xs:element><xs:element minOccurs="0" name="ConversationID" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Used for B2B</xs:documentation></xs:annotation></xs:element></xs:sequence></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element></xs:schema></wsdl:types><wsdl:message name="Provide_ServiceRequest">
+		<wsdl:part element="tns1:MessageViewer" name="request">
+    </wsdl:part></wsdl:message><wsdl:portType name="Provide_ServicePort">
+		<wsdl:operation name="Provide_Service">
+			<wsdl:input message="tns:Provide_ServiceRequest">
+    </wsdl:input></wsdl:operation></wsdl:portType><wsdl:binding name="Provide_ServiceBinding" type="tns:Provide_ServicePort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/><wsdl:operation name="Provide_Service">
+			<soap:operation soapAction=""/><wsdl:input>
+				<soap:body use="literal"/></wsdl:input></wsdl:operation></wsdl:binding><wsdl:service name="Provide_ServiceService">
+		<wsdl:port binding="tns:Provide_ServiceBinding" name="Provide_ServicePort">
+			<soap:address location="http://stlucidev01-data.monsanto.com/CastIron_MQ_MessageViewer"/></wsdl:port></wsdl:service></wsdl:definitions></main></document>

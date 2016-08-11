@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document><main name="" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.monsanto.com/InventorySnapshot" xmlns:tns="http://www.monsanto.com/InventorySnapshot" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="InventorySnapshotRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="items" type="tns:lineItem"/></xs:sequence></xs:complexType></xs:element><xs:complexType name="lineItem">
+		<xs:sequence>
+			<xs:element name="WERKS" type="xs:string"/><xs:element name="LGORT" type="xs:string"/><xs:element name="ZZARKTX" type="xs:string"/><xs:element name="CHARG" type="xs:string"/><xs:element name="BSTME">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="SSU"/><xs:enumeration value="USU"/></xs:restriction></xs:simpleType></xs:element><xs:element name="CVMLA" type="xs:string"/><xs:element name="CEINM" type="xs:string"/><xs:element name="CSPEM" type="xs:string"/><xs:element name="CUMLM" type="xs:string"/></xs:sequence></xs:complexType><xs:element name="InventorySnapshotResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Success" type="xs:string"/></xs:sequence></xs:complexType></xs:element></xs:schema></main></document>

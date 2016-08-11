@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document><main name="CommonEmailHandler.wsdl" type="http://www.approuter.com/schemas/2003/1/wsdl/"><wsdl:definitions name="ProvideEmailTemplate" targetNamespace="http://www.approuter.com/connectors/wsdl" xmlns="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.approuter.com/connectors/wsdl" xmlns:tns1="http://www.approuter.com/connectors/request/5/" xmlns:tns2="http://www.approuter.com/connectors/response/5/" xmlns:tns3="http://www.approuter.com/connectors/fault/723/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.approuter.com/connectors/request/5/" xmlns:tns="http://www.approuter.com/connectors/request/5/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="processEmailTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" name="from" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="to" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="cc" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="bcc" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="subject" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="bodyIntro" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="body" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="signature" nillable="true" type="xs:string"/><xs:element name="JobInfo">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="jobId" type="xs:string"/><xs:element name="jobStartTime" type="xs:dateTime"/><xs:element name="projectName" type="xs:string"/><xs:element name="configurationName" type="xs:string"/><xs:element name="orchestrationName" type="xs:string"/><xs:element name="routerHostName" type="xs:string"/></xs:sequence></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element><xs:element name="returnProcessEmailTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="returnCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="returnText" nillable="true" type="xs:string"/></xs:sequence></xs:complexType></xs:element><xs:element name="returnProcessEmailFaultTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="returnCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="returnText" nillable="true" type="xs:string"/></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.approuter.com/connectors/response/5/" xmlns:tns="http://www.approuter.com/connectors/response/5/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="processEmailTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" name="from" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="to" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="cc" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="bcc" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="subject" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="bodyIntro" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="body" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="signature" nillable="true" type="xs:string"/><xs:element name="JobInfo">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="jobId" type="xs:string"/><xs:element name="jobStartTime" type="xs:dateTime"/><xs:element name="projectName" type="xs:string"/><xs:element name="configurationName" type="xs:string"/><xs:element name="orchestrationName" type="xs:string"/><xs:element name="routerHostName" type="xs:string"/></xs:sequence></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element><xs:element name="returnProcessEmailTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="returnCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="returnText" nillable="true" type="xs:string"/></xs:sequence></xs:complexType></xs:element><xs:element name="returnProcessEmailFaultTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="returnCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="returnText" nillable="true" type="xs:string"/></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.approuter.com/connectors/fault/723/" xmlns:tns="http://www.approuter.com/connectors/fault/723/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="processEmailTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" name="from" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="to" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="cc" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="bcc" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="subject" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="bodyIntro" nillable="true" type="xs:string"/><xs:element minOccurs="1" name="body" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="signature" nillable="true" type="xs:string"/><xs:element name="JobInfo">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="jobId" type="xs:string"/><xs:element name="jobStartTime" type="xs:dateTime"/><xs:element name="projectName" type="xs:string"/><xs:element name="configurationName" type="xs:string"/><xs:element name="orchestrationName" type="xs:string"/><xs:element name="routerHostName" type="xs:string"/></xs:sequence></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element><xs:element name="returnProcessEmailTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="returnCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="returnText" nillable="true" type="xs:string"/></xs:sequence></xs:complexType></xs:element><xs:element name="returnProcessEmailFaultTemplate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="returnCode" nillable="true" type="xs:string"/><xs:element minOccurs="0" name="returnText" nillable="true" type="xs:string"/></xs:sequence></xs:complexType></xs:element></xs:schema></wsdl:types><wsdl:message name="returnProcessEmailFaultTemplate">
+		<wsdl:part element="tns3:returnProcessEmailFaultTemplate" name="fault"/></wsdl:message><wsdl:message name="ProvideEmailTemplateResponse">
+		<wsdl:part element="tns2:returnProcessEmailTemplate" name="response"/></wsdl:message><wsdl:message name="ProvideEmailTemplateRequest">
+		<wsdl:part element="tns1:processEmailTemplate" name="request"/></wsdl:message><wsdl:portType name="ProvideEmailTemplatePort">
+		<wsdl:operation name="ProvideEmailTemplate">
+			<wsdl:input message="tns:ProvideEmailTemplateRequest"/><wsdl:output message="tns:ProvideEmailTemplateResponse"/><wsdl:fault message="tns:returnProcessEmailFaultTemplate" name="returnFault"/></wsdl:operation></wsdl:portType><wsdl:binding name="ProvideEmailTemplateBinding" type="tns:ProvideEmailTemplatePort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/><wsdl:operation name="ProvideEmailTemplate">
+			<soap:operation soapAction=""/><wsdl:input>
+				<soap:body use="literal"/></wsdl:input><wsdl:output>
+				<soap:body use="literal"/></wsdl:output><wsdl:fault name="returnFault">
+				<soap:fault name="returnFault" use="literal"/></wsdl:fault></wsdl:operation></wsdl:binding><wsdl:service name="ProvideEmailTemplateService">
+		<wsdl:port binding="tns:ProvideEmailTemplateBinding" name="ProvideEmailTemplatePort">
+			<soap:address location="http://10.30.70.181/CommonEmailHandler"/></wsdl:port></wsdl:service></wsdl:definitions></main></document>

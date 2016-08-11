@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:ns2="http://www.approuter.com/studioproject/documentation/1.0/">
+   <head>
+      <title>COMM_US_Ascend_InventorySnapshot 1.0</title>
+      <style type="text/css">
+         #doc-body {
+         margin: 12px;
+         width: 600px;
+         }
+         #page-header {
+         background-color: #dfdfdf;
+         border: 1px solid #cccccc;
+         margin-bottom: 12px;
+         padding: 0px 3px 0px 0px;
+         width: 600px;
+         }
+         #project-description {
+         font-size: 11pt;
+         padding-left: 12px;
+         }
+         #project-comments {
+         font-size: 8pt;
+         background-color: #efefef;
+         border: 1px solid #dddddd;
+         margin-top: 6px;
+         margin-left: 12px;
+         padding: 3px 6px 3px 6px;
+         width: 600px;
+         }
+         
+         #project-comments .project-comment-break {
+         font-size: 3px;
+         }
+         #print-button {
+         color: #555555;
+         cursor: pointer;
+         font-size: 8pt;
+         padding: 0px;
+         }
+         #print-button:hover {
+         text-decoration: underline;
+         }
+         #toc {
+         margin-top: 6px;
+         }
+         @media print {
+         
+         #print-button {
+         display: none;
+         }
+         #toc {
+         display: none;
+         }
+         }
+         .activity-container {
+         border-color: #cccccc;
+         border-width: 1px;
+         margin-right: 0px;
+         padding-left: 6px;
+         padding-right: 0px;
+         }
+         .entity-name {
+         font-size: 8pt;
+         font-weight: bold;
+         padding: 0px;
+         }
+         .entity-type {
+         color: #454545;
+         font-weight: bold;
+         padding-left: 6px;
+         }
+         .entity-subcontainer {
+         background-color: white;
+         border: 1px solid #aaaaaa;
+         font-size: 8pt;
+         margin-top: 3px;
+         padding: 0px;
+         }
+         .entity-subcontainer .header {
+         background-color: #efefef;
+         border-color: #cccccc;
+         border-style: none none solid none;
+         border-width: 1px;
+         font-size: 8pt;
+         font-weight: bold;
+         padding: 3px;
+         }
+         .entity-subcontainer .content {
+         padding: 3px 0px 3px 3px;
+         }
+         .entity-custom-field {
+         font-size: 8pt;
+         padding: 3px;
+         }
+         .entity-custom-field-label {
+         font-size: 8pt;
+         font-style: italic;
+         }
+         .entity-custom-field-value {
+         font-size: 8pt;
+         }
+         .comments {
+         padding: 6px 12px 6px 6px;
+         font-size: 8pt;
+         }
+         .emptycomment {
+         color: #666666;
+         }
+         .padded-left {
+         padding-left: 12px;
+         }
+         body {
+         color:#000000;
+         font: normal 12pt verdana,arial,helvetica;
+         }
+         div.horz-ruler {
+         border-top: 2px solid #454545;
+         height: 2px;
+         line-height: 2px;
+         width: 100%;
+         }
+         table tr td, table tr th {
+         color:black;
+         font: normal 10pt verdana,arial,helvetica;
+         }
+         table.entity-details tr th {
+         font-weight: bold;
+         margin-bottom: 3px;
+         text-align:left;
+         }
+         table.entity-details {
+         margin: 6px 0px 0px 12px;
+         width: 100%;
+         }
+         
+         p {
+         line-height:1.5em;
+         margin-top:0.5em; margin-bottom:1.0em;
+         }
+         h1 {
+         margin: 0px; font: 145% verdana,arial,helvetica
+         }
+         h2 {
+         margin-top: 1em; margin-bottom: 0px; font: normal 120% verdana,arial,helvetica;
+         }
+         h3 {
+         margin-top: 0px;
+         margin-right: 0px;
+         margin-bottom: 0.5em;
+         font: bold 110% verdana,arial,helvetica;
+         }
+         h4 {
+         margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+         }
+         h5 {
+         margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+         }
+         h6 {
+         margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+         }
+         
+      </style>
+   </head>
+   <body>
+      <div id="doc-body" align="left">
+         <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+               <td>
+                  <table align="left" id="page-header" border="0" cellpadding="3" cellspacing="0">
+                     <tr>
+                        <td align="left">
+                           <h1>COMM_US_Ascend_InventorySnapshot 1.0
+                              Documentation
+                              
+                           </h1>
+                        </td>
+                        <td align="right" rowspan="2" valign="bottom">
+                           <script type="text/javascript">
+                              function printDoc() {
+                              window.print();
+                              }
+                              
+                           </script>
+                           <div id="print-button" onclick="printDoc();">Print</div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td align="left" id="project-description">WebSphere Cast Iron Studio Project</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <table id="toc" align="left" border="0" cellpadding="0" cellspacing="0">
+                     <tr>
+                        <td>
+                           <ul>
+                              <li>
+                                 <a href="#_configprops">Configuration Properties</a>
+                              </li>
+                              <li>
+                                 <a href="#_endpoints">Endpoints</a>
+                              </li>
+                              <li>
+                                 <a href="#_orchestrations">Orchestrations</a>
+                              </li>
+                              <li>
+                                 <a href="#_wsdls">WSDLs</a>
+                              </li>
+                              <li>
+                                 <a href="#_xmlschemas">XML Schemas</a>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </table>
+         <p>
+            <h2>
+               <a name="_configprops">Configuration Properties</a>
+            </h2>
+            <div class="horz-ruler"></div>
+         </p>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <table class="entity-subcontainer" border="0" cellpadding="3" cellspacing="0">
+                     <tr>
+                        <td class="header">name</td>
+                        <td class="header">type</td>
+                        <td class="header">value</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">email_to_address</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">integration.services.delivery@monsanto.com</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">error_service_location</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">http://10.30.70.180:80/ErrorLoggerLocal</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">http_hostname</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">cs3.salesforce.com</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">mq_hostname</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">10.30.70.172</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">mq_port</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">1414</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">mq_queuemanager</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">MONQA_COMM_US</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">mq_queuechannel</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">CASTIRON_TO_COMM_US</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">mq_username</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">root</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">salesforce_username</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">integration.services.support@monsanto.com.usqa</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">salesforce_password</td>
+                        <td class="entity-custom-field-value">Password</td>
+                        <td class="entity-custom-field-value">*********************************</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">salesforce_url</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">https://mongateway-int.monsanto.com/SFDCPassthrough/26</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">errorqueue</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">INVENTORYSNAPSHOT.ERROR</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">processing_queue</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">INVENTORYSNAPSHOT.PROCESSING</td>
+                     </tr>
+                     <tr>
+                        <td class="entity-custom-field-label" nowrap="nowrap">http_salesforce</td>
+                        <td class="entity-custom-field-value">String</td>
+                        <td class="entity-custom-field-value">/services/apexrest/SapFeedToProductInventoryRestWebservice</td>
+                     </tr>
+                  </table>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+         <p>
+            <h2>
+               <a name="_endpoints">Endpoints</a>
+            </h2>
+            <div class="horz-ruler"></div>
+         </p>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <div style="background-color: #dfdfdf; border: 1px solid #cccccc; padding: 3px;">
+                     <div class="entity-name">ErrorHandlerService
+                        <span class="entity-type">(WebService)
+                           
+                        </span>
+                     </div>
+                     <div class="entity-subcontainer">
+                        <div class="header">details</div>
+                        <div class="content">
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">WSDL Name:</td>
+                                    <td class="entity-custom-field-value">CommonErrorHandler</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Service:</td>
+                                    <td class="entity-custom-field-value">{http://www.approuter.com/connectors/wsdl}ReceiveErrorLogRequestService</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Port:</td>
+                                    <td class="entity-custom-field-value">ReceiveErrorLogRequestPort</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Location:</td>
+                                    <td class="entity-custom-field-value">error_service_location (http://10.30.70.180:80/ErrorLoggerLocal)</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="entity-subcontainer">
+                        <span class="emptycomment">&lt;no comments&gt;</span>
+                     </div>
+                  </div>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <div style="background-color: #dfdfdf; border: 1px solid #cccccc; padding: 3px;">
+                     <div class="entity-name">HTTP_SalesForce
+                        <span class="entity-type">(HTTP)
+                           
+                        </span>
+                     </div>
+                     <div class="entity-subcontainer">
+                        <div class="header">details</div>
+                        <div class="content">
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Host Name:</td>
+                                    <td class="entity-custom-field-value">http_hostname (cs3.salesforce.com)</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Port:</td>
+                                    <td class="entity-custom-field-value">443</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Authentication:</td>
+                                    <td class="entity-custom-field-value">Basic</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">User Name:</td>
+                                    <td class="entity-custom-field-value">anonymous</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Security:</td>
+                                    <td class="entity-custom-field-value">HTTPS</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Time out after:</td>
+                                    <td class="entity-custom-field-value">300</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Maximum Connections:</td>
+                                    <td class="entity-custom-field-value">25</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Endpoint Runs Behind Firewall:</td>
+                                    <td class="entity-custom-field-value">false</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Secure Connector Name:</td>
+                                    <td class="entity-custom-field-value"></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="entity-subcontainer">
+                        <span class="emptycomment">&lt;no comments&gt;</span>
+                     </div>
+                  </div>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <div style="background-color: #dfdfdf; border: 1px solid #cccccc; padding: 3px;">
+                     <div class="entity-name">MQ_InventorySnapshot
+                        <span class="entity-type">(MQ)
+                           
+                        </span>
+                     </div>
+                     <div class="entity-subcontainer">
+                        <div class="header">details</div>
+                        <div class="content">
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Host Name:</td>
+                                    <td class="entity-custom-field-value">mq_hostname (10.30.70.172)</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Port:</td>
+                                    <td class="entity-custom-field-value">mq_port (1414)</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Queue Manager:</td>
+                                    <td class="entity-custom-field-value">mq_queuemanager (MONQA_COMM_US)</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Channel Name:</td>
+                                    <td class="entity-custom-field-value">mq_queuechannel (CASTIRON_TO_COMM_US)</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">User Name:</td>
+                                    <td class="entity-custom-field-value">mq_username (root)</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Minimum Connections:</td>
+                                    <td class="entity-custom-field-value">1</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Maximum Connections:</td>
+                                    <td class="entity-custom-field-value">25</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Maximum Idle Time:</td>
+                                    <td class="entity-custom-field-value">120</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Endpoint Runs Behind Firewall:</td>
+                                    <td class="entity-custom-field-value">false</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Secure Connector Name:</td>
+                                    <td class="entity-custom-field-value"></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="entity-subcontainer">
+                        <span class="emptycomment">&lt;no comments&gt;</span>
+                     </div>
+                  </div>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <div style="background-color: #dfdfdf; border: 1px solid #cccccc; padding: 3px;">
+                     <div class="entity-name">Salesforce</div>
+                     <div class="entity-subcontainer">
+                        <div class="header">details</div>
+                        <div class="content">
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">User Name:</td>
+                                    <td class="entity-custom-field-value">{property:/salesforce_username}</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Type:</td>
+                                    <td class="entity-custom-field-value">CUSTOM</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Login URL:</td>
+                                    <td class="entity-custom-field-value">{property:/salesforce_url}</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Time out after:</td>
+                                    <td class="entity-custom-field-value">300</td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Proxy Host Name:</td>
+                                    <td class="entity-custom-field-value"></td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Proxy Port:</td>
+                                    <td class="entity-custom-field-value"></td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Proxy User Name:</td>
+                                    <td class="entity-custom-field-value"></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="entity-subcontainer">
+                        <span class="emptycomment">&lt;no comments&gt;</span>
+                     </div>
+                  </div>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+         <p>
+            <h2>
+               <a name="_orchestrations">Orchestrations</a>
+            </h2>
+            <div class="horz-ruler"></div>
+         </p>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <div style="background-color: #dfdfdf; border: 1px solid #cccccc; padding: 3px;">
+                     <div class="entity-name">MQ_To_SalesForce_InventorySnapshot</div>
+                     <div class="entity-subcontainer">
+                        <div class="header">details</div>
+                        <div class="content">
+                           <div class="entity-custom-field">
+                              <table border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                                    <td class="entity-custom-field-label" nowrap="nowrap">Number of Activities:</td>
+                                    <td class="entity-custom-field-value">15</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="entity-subcontainer">
+                        <span class="emptycomment">&lt;no comments&gt;</span>
+                     </div>
+                     <div class="entity-subcontainer" style="padding-right: 0px; margin-right: 0px;">
+                        <div class="header">activities</div>
+                        <div class="content">
+                           <div class="activity-container">
+                              <div class="header" style="background-color: white; border-style: none;">Poll Message
+                                 <span class="entity-type">(MQ)
+                                    
+                                 </span>
+                                 <span class="padded-left" style="font-weight: normal;">This activity retrieves messages from the selected MQ endpoint</span>
+                              </div>
+                           </div>
+                           <div class="activity-container">
+                              <div class="header" style="background-color: white;">Try
+                                 <span class="entity-type">(Logic)
+                                    
+                                 </span>
+                                 <span class="padded-left" style="font-weight: normal;">Try</span>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-style: none;">Get User Information
+                                    <span class="entity-type">(Salesforce.com)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">Get User Information</span>
+                                 </div>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-style: none;">Read XML
+                                    <span class="entity-type">(Transform)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">Parse Xml Activity</span>
+                                 </div>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-style: none;">Write JSON
+                                    <span class="entity-type">(Transform)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">Write Json Activity</span>
+                                 </div>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-style: none;">Invoke Request
+                                    <span class="entity-type">(HTTP)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">This activity sends a request to the selected HTTP endpoint</span>
+                                 </div>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-style: none;">Create Job Keys
+                                    <span class="entity-type">(Utilities)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">Log Keys Activity</span>
+                                 </div>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-top-style: solid;">CatchAll-Local
+                                    <span class="entity-type">(Logic)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">Catch All Activity</span>
+                                 </div>
+                                 <div class="activity-container" style="border-left-style: solid;">
+                                    <div class="header" style="background-color: white; border-style: none;">Put Message
+                                       <span class="entity-type">(MQ)
+                                          
+                                       </span>
+                                       <span class="padded-left" style="font-weight: normal;">This activity sends a message via the selected MQ endpoint</span>
+                                    </div>
+                                 </div>
+                                 <div class="activity-container" style="border-left-style: solid;">
+                                    <div class="header" style="background-color: white; border-style: none;">Invoke Service
+                                       <span class="entity-type">(Web Services)
+                                          
+                                       </span>
+                                       <span class="padded-left" style="font-weight: normal;">This activity invokes a web service on the selected Web Service endpoint</span>
+                                    </div>
+                                 </div>
+                                 <div class="activity-container" style="border-left-style: solid;">
+                                    <div class="header" style="background-color: white; border-style: none;">Terminate
+                                       <span class="entity-type">(Logic)
+                                          
+                                       </span>
+                                       <span class="padded-left" style="font-weight: normal;">Terminate Orchestration Jobs</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="activity-container">
+                              <div class="header" style="background-color: white;">CatchAll-Global
+                                 <span class="entity-type">(Logic)
+                                    
+                                 </span>
+                                 <span class="padded-left" style="font-weight: normal;">Catch All Activity</span>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-style: none;">Create Job Keys
+                                    <span class="entity-type">(Utilities)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">Log Keys Activity</span>
+                                 </div>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-style: none;">Invoke Service
+                                    <span class="entity-type">(Web Services)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">This activity invokes a web service on the selected Web Service endpoint</span>
+                                 </div>
+                              </div>
+                              <div class="activity-container" style="border-left-style: solid;">
+                                 <div class="header" style="background-color: white; border-style: none;">Terminate
+                                    <span class="entity-type">(Logic)
+                                       
+                                    </span>
+                                    <span class="padded-left" style="font-weight: normal;">Terminate Orchestration Jobs</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+         <p>
+            <h2>
+               <a name="_wsdls">WSDLs</a>
+            </h2>
+            <div class="horz-ruler"></div>
+         </p>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <div style="background-color: #dfdfdf; border: 1px solid #cccccc; padding: 3px;">
+                     <div class="entity-name">CommonErrorHandler</div>
+                     <div class="entity-subcontainer">
+                        <span class="emptycomment">&lt;no comments&gt;</span>
+                     </div>
+                  </div>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+         <p>
+            <h2>
+               <a name="_xmlschemas">XML Schemas</a>
+            </h2>
+            <div class="horz-ruler"></div>
+         </p>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <div style="background-color: #dfdfdf; border: 1px solid #cccccc; padding: 3px;">
+                     <div class="entity-name">InventorySnapshot</div>
+                     <div class="entity-subcontainer">
+                        <span class="emptycomment">&lt;no comments&gt;</span>
+                     </div>
+                  </div>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+         <table class="entity-details" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+               <td valign="top" width="100%">
+                  <div style="background-color: #dfdfdf; border: 1px solid #cccccc; padding: 3px;">
+                     <div class="entity-name">InventorySnapshot1</div>
+                     <div class="entity-subcontainer">
+                        <span class="emptycomment">&lt;no comments&gt;</span>
+                     </div>
+                  </div>
+               </td>
+               <td rowspan="4" valign="top" width="12">
+                  <div style="width: 24px;"></div>
+               </td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

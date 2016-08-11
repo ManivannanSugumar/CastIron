@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document><main name="APISecurity.wsdl" type="http://www.approuter.com/schemas/2003/1/wsdl/"><definitions name="SecurityManager" targetNamespace="http://www.approuter.com/schemas/2008/1/security" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.approuter.com/schemas/2008/1/security" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<types>
+		<xsd:schema>
+			<xsd:import namespace="http://www.approuter.com/schemas/2008/1/security" schemaLocation="security_xsd=1"/></xsd:schema><xsd:schema>
+			<xsd:import namespace="http://www.approuter.com/schema/router/1000/security/03" schemaLocation="security_xsd=2"/></xsd:schema></types><message name="login">
+		<part element="tns:login" name="parameters"/></message><message name="loginResponse">
+		<part element="tns:loginResponse" name="parameters"/></message><message name="logout">
+		<part element="tns:logout" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="logoutResponse">
+		<part element="tns:logoutResponse" name="result"/></message><message name="currentScope">
+		<part element="tns:currentScope" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="currentScopeResponse">
+		<part element="tns:currentScopeResponse" name="result"/></message><message name="setCurrentScope">
+		<part element="tns:setCurrentScope" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="setCurrentScopeResponse">
+		<part element="tns:setCurrentScopeResponse" name="result"/></message><message name="setCurrentScopeById">
+		<part element="tns:setCurrentScopeById" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="setCurrentScopeByIdResponse">
+		<part element="tns:setCurrentScopeByIdResponse" name="result"/></message><message name="getScope">
+		<part element="tns:getScope" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getScopeResponse">
+		<part element="tns:getScopeResponse" name="result"/></message><message name="getScopeById">
+		<part element="tns:getScopeById" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getScopeByIdResponse">
+		<part element="tns:getScopeByIdResponse" name="result"/></message><message name="getScopesByParentId">
+		<part element="tns:getScopesByParentId" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getScopesByParentIdResponse">
+		<part element="tns:getScopesByParentIdResponse" name="result"/></message><message name="createUser">
+		<part element="tns:createUser" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="createUserResponse">
+		<part element="tns:createUserResponse" name="result"/></message><message name="deleteUser">
+		<part element="tns:deleteUser" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="deleteUserResponse">
+		<part element="tns:deleteUserResponse" name="result"/></message><message name="updateUser">
+		<part element="tns:updateUser" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="updateUserResponse">
+		<part element="tns:updateUserResponse" name="result"/></message><message name="enableUser">
+		<part element="tns:enableUser" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="enableUserResponse">
+		<part element="tns:enableUserResponse" name="result"/></message><message name="disableUser">
+		<part element="tns:disableUser" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="disableUserResponse">
+		<part element="tns:disableUserResponse" name="result"/></message><message name="isUserEnabled">
+		<part element="tns:isUserEnabled" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="isUserEnabledResponse">
+		<part element="tns:isUserEnabledResponse" name="result"/></message><message name="changePassword">
+		<part element="tns:changePassword" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="changePasswordResponse">
+		<part element="tns:changePasswordResponse" name="result"/></message><message name="userExists">
+		<part element="tns:userExists" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="userExistsResponse">
+		<part element="tns:userExistsResponse" name="result"/></message><message name="getUser">
+		<part element="tns:getUser" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getUserResponse">
+		<part element="tns:getUserResponse" name="result"/></message><message name="getUserById">
+		<part element="tns:getUserById" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getUserByIdResponse">
+		<part element="tns:getUserByIdResponse" name="result"/></message><message name="getRole">
+		<part element="tns:getRole" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getRoleResponse">
+		<part element="tns:getRoleResponse" name="result"/></message><message name="getRoleById">
+		<part element="tns:getRoleById" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getRoleByIdResponse">
+		<part element="tns:getRoleByIdResponse" name="result"/></message><message name="createRole">
+		<part element="tns:createRole" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="createRoleResponse">
+		<part element="tns:createRoleResponse" name="result"/></message><message name="grantRole">
+		<part element="tns:grantRole" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="grantRoleResponse">
+		<part element="tns:grantRoleResponse" name="result"/></message><message name="revokeRole">
+		<part element="tns:revokeRole" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="revokeRoleResponse">
+		<part element="tns:revokeRoleResponse" name="result"/></message><message name="deleteRole">
+		<part element="tns:deleteRole" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="deleteRoleResponse">
+		<part element="tns:deleteRoleResponse" name="result"/></message><message name="updateRole">
+		<part element="tns:updateRole" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="updateRoleResponse">
+		<part element="tns:updateRoleResponse" name="result"/></message><message name="roleExists">
+		<part element="tns:roleExists" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="roleExistsResponse">
+		<part element="tns:roleExistsResponse" name="result"/></message><message name="addRoleToRoleGroup">
+		<part element="tns:addRoleToRoleGroup" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="addRoleToRoleGroupResponse">
+		<part element="tns:addRoleToRoleGroupResponse" name="result"/></message><message name="removeRoleFromRoleGroup">
+		<part element="tns:removeRoleFromRoleGroup" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="removeRoleFromRoleGroupResponse">
+		<part element="tns:removeRoleFromRoleGroupResponse" name="result"/></message><message name="listUsers">
+		<part element="tns:listUsers" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="listUsersResponse">
+		<part element="tns:listUsersResponse" name="result"/></message><message name="filterUsers">
+		<part element="tns:filterUsers" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="filterUsersResponse">
+		<part element="tns:filterUsersResponse" name="result"/></message><message name="filterNewUsers">
+		<part element="tns:filterNewUsers" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="filterNewUsersResponse">
+		<part element="tns:filterNewUsersResponse" name="result"/></message><message name="getUsers">
+		<part element="tns:getUsers" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getUsersResponse">
+		<part element="tns:getUsersResponse" name="result"/></message><message name="listRoles">
+		<part element="tns:listRoles" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="listRolesResponse">
+		<part element="tns:listRolesResponse" name="result"/></message><message name="getRoles">
+		<part element="tns:getRoles" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getRolesResponse">
+		<part element="tns:getRolesResponse" name="result"/></message><message name="listGrantableRoles">
+		<part element="tns:listGrantableRoles" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="listGrantableRolesResponse">
+		<part element="tns:listGrantableRolesResponse" name="result"/></message><message name="getGrantedRoles">
+		<part element="tns:getGrantedRoles" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getGrantedRolesResponse">
+		<part element="tns:getGrantedRolesResponse" name="result"/></message><message name="getImpliedRoles">
+		<part element="tns:getImpliedRoles" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getImpliedRolesResponse">
+		<part element="tns:getImpliedRolesResponse" name="result"/></message><message name="getRoleGroups">
+		<part element="tns:getRoleGroups" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getRoleGroupsResponse">
+		<part element="tns:getRoleGroupsResponse" name="result"/></message><message name="getRoleUsers">
+		<part element="tns:getRoleUsers" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getRoleUsersResponse">
+		<part element="tns:getRoleUsersResponse" name="result"/></message><message name="getRolesInRoleGroup">
+		<part element="tns:getRolesInRoleGroup" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getRolesInRoleGroupResponse">
+		<part element="tns:getRolesInRoleGroupResponse" name="result"/></message><message name="isRealmUser">
+		<part element="tns:isRealmUser" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="isRealmUserResponse">
+		<part element="tns:isRealmUserResponse" name="result"/></message><message name="hasPrivilege">
+		<part element="tns:hasPrivilege" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="hasPrivilegeResponse">
+		<part element="tns:hasPrivilegeResponse" name="result"/></message><message name="listPrivileges">
+		<part element="tns:listPrivileges" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="listPrivilegesResponse">
+		<part element="tns:listPrivilegesResponse" name="result"/></message><message name="grantPrivilege">
+		<part element="tns:grantPrivilege" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="grantPrivilegeResponse">
+		<part element="tns:grantPrivilegeResponse" name="result"/></message><message name="grantPrivileges">
+		<part element="tns:grantPrivileges" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="grantPrivilegesResponse">
+		<part element="tns:grantPrivilegesResponse" name="result"/></message><message name="revokePrivilege">
+		<part element="tns:revokePrivilege" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="revokePrivilegeResponse">
+		<part element="tns:revokePrivilegeResponse" name="result"/></message><message name="revokePrivileges">
+		<part element="tns:revokePrivileges" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="revokePrivilegesResponse">
+		<part element="tns:revokePrivilegesResponse" name="result"/></message><message name="listAvailableActions">
+		<part element="tns:listAvailableActions" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="listAvailableActionsResponse">
+		<part element="tns:listAvailableActionsResponse" name="result"/></message><message name="clearPrivileges">
+		<part element="tns:clearPrivileges" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="clearPrivilegesResponse">
+		<part element="tns:clearPrivilegesResponse" name="result"/></message><message name="getLdapConfiguration">
+		<part element="tns:getLdapConfiguration" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getLdapConfigurationResponse">
+		<part element="tns:getLdapConfigurationResponse" name="result"/></message><message name="setLdapConfiguration">
+		<part element="tns:setLdapConfiguration" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="setLdapConfigurationResponse">
+		<part element="tns:setLdapConfigurationResponse" name="result"/></message><message name="getKerberosServerName">
+		<part element="tns:getKerberosServerName" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getKerberosServerNameResponse">
+		<part element="tns:getKerberosServerNameResponse" name="result"/></message><message name="getKerberosRealm">
+		<part element="tns:getKerberosRealm" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="getKerberosRealmResponse">
+		<part element="tns:getKerberosRealmResponse" name="result"/></message><message name="setKerberosConfiguration">
+		<part element="tns:setKerberosConfiguration" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="setKerberosConfigurationResponse">
+		<part element="tns:setKerberosConfigurationResponse" name="result"/></message><message name="removeKerberosConfiguration">
+		<part element="tns:removeKerberosConfiguration" name="parameters"/><part element="tns:sessionId" name="sessionId"/></message><message name="removeKerberosConfigurationResponse">
+		<part element="tns:removeKerberosConfigurationResponse" name="result"/></message><portType name="SecurityManager">
+		<operation name="login">
+			<input message="tns:login"/><output message="tns:loginResponse"/></operation><operation name="logout" parameterOrder="parameters sessionId">
+			<input message="tns:logout"/><output message="tns:logoutResponse"/></operation><operation name="currentScope" parameterOrder="parameters sessionId">
+			<input message="tns:currentScope"/><output message="tns:currentScopeResponse"/></operation><operation name="setCurrentScope" parameterOrder="parameters sessionId">
+			<input message="tns:setCurrentScope"/><output message="tns:setCurrentScopeResponse"/></operation><operation name="setCurrentScopeById" parameterOrder="parameters sessionId">
+			<input message="tns:setCurrentScopeById"/><output message="tns:setCurrentScopeByIdResponse"/></operation><operation name="getScope" parameterOrder="parameters sessionId">
+			<input message="tns:getScope"/><output message="tns:getScopeResponse"/></operation><operation name="getScopeById" parameterOrder="parameters sessionId">
+			<input message="tns:getScopeById"/><output message="tns:getScopeByIdResponse"/></operation><operation name="getScopesByParentId" parameterOrder="parameters sessionId">
+			<input message="tns:getScopesByParentId"/><output message="tns:getScopesByParentIdResponse"/></operation><operation name="createUser" parameterOrder="parameters sessionId">
+			<input message="tns:createUser"/><output message="tns:createUserResponse"/></operation><operation name="deleteUser" parameterOrder="parameters sessionId">
+			<input message="tns:deleteUser"/><output message="tns:deleteUserResponse"/></operation><operation name="updateUser" parameterOrder="parameters sessionId">
+			<input message="tns:updateUser"/><output message="tns:updateUserResponse"/></operation><operation name="enableUser" parameterOrder="parameters sessionId">
+			<input message="tns:enableUser"/><output message="tns:enableUserResponse"/></operation><operation name="disableUser" parameterOrder="parameters sessionId">
+			<input message="tns:disableUser"/><output message="tns:disableUserResponse"/></operation><operation name="isUserEnabled" parameterOrder="parameters sessionId">
+			<input message="tns:isUserEnabled"/><output message="tns:isUserEnabledResponse"/></operation><operation name="changePassword" parameterOrder="parameters sessionId">
+			<input message="tns:changePassword"/><output message="tns:changePasswordResponse"/></operation><operation name="userExists" parameterOrder="parameters sessionId">
+			<input message="tns:userExists"/><output message="tns:userExistsResponse"/></operation><operation name="getUser" parameterOrder="parameters sessionId">
+			<input message="tns:getUser"/><output message="tns:getUserResponse"/></operation><operation name="getUserById" parameterOrder="parameters sessionId">
+			<input message="tns:getUserById"/><output message="tns:getUserByIdResponse"/></operation><operation name="getRole" parameterOrder="parameters sessionId">
+			<input message="tns:getRole"/><output message="tns:getRoleResponse"/></operation><operation name="getRoleById" parameterOrder="parameters sessionId">
+			<input message="tns:getRoleById"/><output message="tns:getRoleByIdResponse"/></operation><operation name="createRole" parameterOrder="parameters sessionId">
+			<input message="tns:createRole"/><output message="tns:createRoleResponse"/></operation><operation name="grantRole" parameterOrder="parameters sessionId">
+			<input message="tns:grantRole"/><output message="tns:grantRoleResponse"/></operation><operation name="revokeRole" parameterOrder="parameters sessionId">
+			<input message="tns:revokeRole"/><output message="tns:revokeRoleResponse"/></operation><operation name="deleteRole" parameterOrder="parameters sessionId">
+			<input message="tns:deleteRole"/><output message="tns:deleteRoleResponse"/></operation><operation name="updateRole" parameterOrder="parameters sessionId">
+			<input message="tns:updateRole"/><output message="tns:updateRoleResponse"/></operation><operation name="roleExists" parameterOrder="parameters sessionId">
+			<input message="tns:roleExists"/><output message="tns:roleExistsResponse"/></operation><operation name="addRoleToRoleGroup" parameterOrder="parameters sessionId">
+			<input message="tns:addRoleToRoleGroup"/><output message="tns:addRoleToRoleGroupResponse"/></operation><operation name="removeRoleFromRoleGroup" parameterOrder="parameters sessionId">
+			<input message="tns:removeRoleFromRoleGroup"/><output message="tns:removeRoleFromRoleGroupResponse"/></operation><operation name="listUsers" parameterOrder="parameters sessionId">
+			<input message="tns:listUsers"/><output message="tns:listUsersResponse"/></operation><operation name="filterUsers" parameterOrder="parameters sessionId">
+			<input message="tns:filterUsers"/><output message="tns:filterUsersResponse"/></operation><operation name="filterNewUsers" parameterOrder="parameters sessionId">
+			<input message="tns:filterNewUsers"/><output message="tns:filterNewUsersResponse"/></operation><operation name="getUsers" parameterOrder="parameters sessionId">
+			<input message="tns:getUsers"/><output message="tns:getUsersResponse"/></operation><operation name="listRoles" parameterOrder="parameters sessionId">
+			<input message="tns:listRoles"/><output message="tns:listRolesResponse"/></operation><operation name="getRoles" parameterOrder="parameters sessionId">
+			<input message="tns:getRoles"/><output message="tns:getRolesResponse"/></operation><operation name="listGrantableRoles" parameterOrder="parameters sessionId">
+			<input message="tns:listGrantableRoles"/><output message="tns:listGrantableRolesResponse"/></operation><operation name="getGrantedRoles" parameterOrder="parameters sessionId">
+			<input message="tns:getGrantedRoles"/><output message="tns:getGrantedRolesResponse"/></operation><operation name="getImpliedRoles" parameterOrder="parameters sessionId">
+			<input message="tns:getImpliedRoles"/><output message="tns:getImpliedRolesResponse"/></operation><operation name="getRoleGroups" parameterOrder="parameters sessionId">
+			<input message="tns:getRoleGroups"/><output message="tns:getRoleGroupsResponse"/></operation><operation name="getRoleUsers" parameterOrder="parameters sessionId">
+			<input message="tns:getRoleUsers"/><output message="tns:getRoleUsersResponse"/></operation><operation name="getRolesInRoleGroup" parameterOrder="parameters sessionId">
+			<input message="tns:getRolesInRoleGroup"/><output message="tns:getRolesInRoleGroupResponse"/></operation><operation name="isRealmUser" parameterOrder="parameters sessionId">
+			<input message="tns:isRealmUser"/><output message="tns:isRealmUserResponse"/></operation><operation name="hasPrivilege" parameterOrder="parameters sessionId">
+			<input message="tns:hasPrivilege"/><output message="tns:hasPrivilegeResponse"/></operation><operation name="listPrivileges" parameterOrder="parameters sessionId">
+			<input message="tns:listPrivileges"/><output message="tns:listPrivilegesResponse"/></operation><operation name="grantPrivilege" parameterOrder="parameters sessionId">
+			<input message="tns:grantPrivilege"/><output message="tns:grantPrivilegeResponse"/></operation><operation name="grantPrivileges" parameterOrder="parameters sessionId">
+			<input message="tns:grantPrivileges"/><output message="tns:grantPrivilegesResponse"/></operation><operation name="revokePrivilege" parameterOrder="parameters sessionId">
+			<input message="tns:revokePrivilege"/><output message="tns:revokePrivilegeResponse"/></operation><operation name="revokePrivileges" parameterOrder="parameters sessionId">
+			<input message="tns:revokePrivileges"/><output message="tns:revokePrivilegesResponse"/></operation><operation name="listAvailableActions" parameterOrder="parameters sessionId">
+			<input message="tns:listAvailableActions"/><output message="tns:listAvailableActionsResponse"/></operation><operation name="clearPrivileges" parameterOrder="parameters sessionId">
+			<input message="tns:clearPrivileges"/><output message="tns:clearPrivilegesResponse"/></operation><operation name="getLdapConfiguration" parameterOrder="parameters sessionId">
+			<input message="tns:getLdapConfiguration"/><output message="tns:getLdapConfigurationResponse"/></operation><operation name="setLdapConfiguration" parameterOrder="parameters sessionId">
+			<input message="tns:setLdapConfiguration"/><output message="tns:setLdapConfigurationResponse"/></operation><operation name="getKerberosServerName" parameterOrder="parameters sessionId">
+			<input message="tns:getKerberosServerName"/><output message="tns:getKerberosServerNameResponse"/></operation><operation name="getKerberosRealm" parameterOrder="parameters sessionId">
+			<input message="tns:getKerberosRealm"/><output message="tns:getKerberosRealmResponse"/></operation><operation name="setKerberosConfiguration" parameterOrder="parameters sessionId">
+			<input message="tns:setKerberosConfiguration"/><output message="tns:setKerberosConfigurationResponse"/></operation><operation name="removeKerberosConfiguration" parameterOrder="parameters sessionId">
+			<input message="tns:removeKerberosConfiguration"/><output message="tns:removeKerberosConfigurationResponse"/></operation></portType><binding name="SecurityManagerPortBinding" type="tns:SecurityManager">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/><operation name="login">
+			<soap:operation soapAction=""/><input>
+				<soap:body use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="logout">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:logout" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="currentScope">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:currentScope" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="setCurrentScope">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:setCurrentScope" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="setCurrentScopeById">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:setCurrentScopeById" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getScope">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getScope" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getScopeById">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getScopeById" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getScopesByParentId">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getScopesByParentId" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="createUser">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:createUser" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="deleteUser">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:deleteUser" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="updateUser">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:updateUser" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="enableUser">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:enableUser" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="disableUser">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:disableUser" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="isUserEnabled">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:isUserEnabled" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="changePassword">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:changePassword" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="userExists">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:userExists" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getUser">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getUser" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getUserById">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getUserById" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getRole">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getRole" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getRoleById">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getRoleById" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="createRole">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:createRole" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="grantRole">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:grantRole" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="revokeRole">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:revokeRole" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="deleteRole">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:deleteRole" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="updateRole">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:updateRole" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="roleExists">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:roleExists" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="addRoleToRoleGroup">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:addRoleToRoleGroup" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="removeRoleFromRoleGroup">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:removeRoleFromRoleGroup" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="listUsers">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:listUsers" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="filterUsers">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:filterUsers" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="filterNewUsers">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:filterNewUsers" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getUsers">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getUsers" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="listRoles">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:listRoles" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getRoles">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getRoles" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="listGrantableRoles">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:listGrantableRoles" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getGrantedRoles">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getGrantedRoles" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getImpliedRoles">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getImpliedRoles" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getRoleGroups">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getRoleGroups" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getRoleUsers">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getRoleUsers" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getRolesInRoleGroup">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getRolesInRoleGroup" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="isRealmUser">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:isRealmUser" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="hasPrivilege">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:hasPrivilege" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="listPrivileges">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:listPrivileges" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="grantPrivilege">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:grantPrivilege" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="grantPrivileges">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:grantPrivileges" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="revokePrivilege">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:revokePrivilege" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="revokePrivileges">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:revokePrivileges" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="listAvailableActions">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:listAvailableActions" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="clearPrivileges">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:clearPrivileges" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getLdapConfiguration">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getLdapConfiguration" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="setLdapConfiguration">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:setLdapConfiguration" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getKerberosServerName">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getKerberosServerName" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="getKerberosRealm">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:getKerberosRealm" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="setKerberosConfiguration">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:setKerberosConfiguration" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation><operation name="removeKerberosConfiguration">
+			<soap:operation soapAction=""/><input>
+				<soap:body parts="parameters" use="literal"/><soap:header message="tns:removeKerberosConfiguration" part="sessionId" use="literal"/></input><output>
+				<soap:body use="literal"/></output></operation></binding><service name="SecurityManager">
+		<port binding="tns:SecurityManagerPortBinding" name="SecurityManagerPort">
+			<soap:address location="https://10.30.70.174:443/ws/security"/></port></service></definitions></main><include name="security_xsd=2" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema elementFormDefault="qualified" targetNamespace="http://www.approuter.com/schema/router/1000/security/03" version="1.0" xmlns:tns="http://www.approuter.com/schema/router/1000/security/03" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="Group">
+<xs:sequence>
+<xs:element name="id" type="xs:string"/><xs:element name="name" type="xs:string"/><xs:element name="displayName" type="xs:string"/><xs:element name="isActive" type="xs:boolean"/><xs:element name="isMutable" type="xs:boolean"/><xs:element name="isVisible" type="xs:boolean"/><xs:element minOccurs="0" name="description" type="xs:string"/><xs:element minOccurs="0" name="email" type="xs:string"/><xs:element maxOccurs="unbounded" minOccurs="0" name="member" nillable="true" type="tns:Member"/><xs:element minOccurs="0" name="createdTime" type="xs:string"/><xs:element minOccurs="0" name="scopeId" type="xs:string"/><xs:element minOccurs="0" name="scopeType" type="xs:string"/><xs:element minOccurs="0" name="groupType" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="Member">
+<xs:sequence>
+<xs:element minOccurs="0" name="memberId" type="xs:string"/><xs:element minOccurs="0" name="groupId" type="xs:string"/><xs:element name="id" type="xs:string"/></xs:sequence><xs:attribute name="type" type="xs:string"/></xs:complexType><xs:complexType name="User">
+<xs:sequence>
+<xs:element name="id" type="xs:string"/><xs:element name="name" type="xs:string"/><xs:element name="encPasswd" type="xs:string"/><xs:element name="displayName" type="xs:string"/><xs:element name="isActive" type="xs:boolean"/><xs:element name="isMutable" type="xs:boolean"/><xs:element name="isVisible" type="xs:boolean"/><xs:element minOccurs="0" name="description" type="xs:string"/><xs:element minOccurs="0" name="email" type="xs:string"/><xs:element minOccurs="0" name="createdTime" type="xs:string"/><xs:element minOccurs="0" name="lastLoginTime" type="xs:string"/><xs:element minOccurs="0" name="lastFailedLoginTime" type="xs:string"/><xs:element default="0" name="failedLoginCount" type="xs:int"/><xs:element minOccurs="0" name="lastPasswordChangeTime" type="xs:string"/><xs:element minOccurs="0" name="scopeId" type="xs:string"/><xs:element minOccurs="0" name="scopeType" type="xs:string"/><xs:element minOccurs="0" name="defaultThirdPartyLibId" type="xs:string"/><xs:element minOccurs="0" name="eulaAcceptedTime" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="privilege">
+<xs:sequence>
+<xs:element minOccurs="0" name="action" type="xs:string"/><xs:element minOccurs="0" name="recipient" type="tns:principal"/><xs:element minOccurs="0" name="target" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="principal">
+<xs:sequence>
+<xs:element minOccurs="0" name="name" type="xs:string"/><xs:element minOccurs="0" name="type" type="tns:principalType"/></xs:sequence></xs:complexType><xs:simpleType name="principalType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="user"/><xs:enumeration value="group"/><xs:enumeration value="realm"/><xs:enumeration value="unknown"/></xs:restriction></xs:simpleType></xs:schema></include><include name="security_xsd=1" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema elementFormDefault="qualified" targetNamespace="http://www.approuter.com/schemas/2008/1/security" version="1.0" xmlns:ns1="http://www.approuter.com/schema/router/1000/security/03" xmlns:tns="http://www.approuter.com/schemas/2008/1/security" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:import namespace="http://www.approuter.com/schema/router/1000/security/03" schemaLocation="security_xsd=2"/><xs:element name="addRoleToRoleGroup" type="tns:addRoleToRoleGroup"/><xs:element name="addRoleToRoleGroupResponse" type="tns:addRoleToRoleGroupResponse"/><xs:element name="changePassword" type="tns:changePassword"/><xs:element name="changePasswordResponse" type="tns:changePasswordResponse"/><xs:element name="clearPrivileges" type="tns:clearPrivileges"/><xs:element name="clearPrivilegesResponse" type="tns:clearPrivilegesResponse"/><xs:element name="createRole" type="tns:createRole"/><xs:element name="createRoleResponse" type="tns:createRoleResponse"/><xs:element name="createUser" type="tns:createUser"/><xs:element name="createUserResponse" type="tns:createUserResponse"/><xs:element name="currentScope" type="tns:currentScope"/><xs:element name="currentScopeResponse" type="tns:currentScopeResponse"/><xs:element name="deleteRole" type="tns:deleteRole"/><xs:element name="deleteRoleResponse" type="tns:deleteRoleResponse"/><xs:element name="deleteUser" type="tns:deleteUser"/><xs:element name="deleteUserResponse" type="tns:deleteUserResponse"/><xs:element name="disableUser" type="tns:disableUser"/><xs:element name="disableUserResponse" type="tns:disableUserResponse"/><xs:element name="enableUser" type="tns:enableUser"/><xs:element name="enableUserResponse" type="tns:enableUserResponse"/><xs:element name="filterNewUsers" type="tns:filterNewUsers"/><xs:element name="filterNewUsersResponse" type="tns:filterNewUsersResponse"/><xs:element name="filterUsers" type="tns:filterUsers"/><xs:element name="filterUsersResponse" type="tns:filterUsersResponse"/><xs:element name="getGrantedRoles" type="tns:getGrantedRoles"/><xs:element name="getGrantedRolesResponse" type="tns:getGrantedRolesResponse"/><xs:element name="getImpliedRoles" type="tns:getImpliedRoles"/><xs:element name="getImpliedRolesResponse" type="tns:getImpliedRolesResponse"/><xs:element name="getKerberosRealm" type="tns:getKerberosRealm"/><xs:element name="getKerberosRealmResponse" type="tns:getKerberosRealmResponse"/><xs:element name="getKerberosServerName" type="tns:getKerberosServerName"/><xs:element name="getKerberosServerNameResponse" type="tns:getKerberosServerNameResponse"/><xs:element name="getLdapConfiguration" type="tns:getLdapConfiguration"/><xs:element name="getLdapConfigurationResponse" type="tns:getLdapConfigurationResponse"/><xs:element name="getRole" type="tns:getRole"/><xs:element name="getRoleById" type="tns:getRoleById"/><xs:element name="getRoleByIdResponse" type="tns:getRoleByIdResponse"/><xs:element name="getRoleGroups" type="tns:getRoleGroups"/><xs:element name="getRoleGroupsResponse" type="tns:getRoleGroupsResponse"/><xs:element name="getRoleResponse" type="tns:getRoleResponse"/><xs:element name="getRoleUsers" type="tns:getRoleUsers"/><xs:element name="getRoleUsersResponse" type="tns:getRoleUsersResponse"/><xs:element name="getRoles" type="tns:getRoles"/><xs:element name="getRolesInRoleGroup" type="tns:getRolesInRoleGroup"/><xs:element name="getRolesInRoleGroupResponse" type="tns:getRolesInRoleGroupResponse"/><xs:element name="getRolesResponse" type="tns:getRolesResponse"/><xs:element name="getScope" type="tns:getScope"/><xs:element name="getScopeById" type="tns:getScopeById"/><xs:element name="getScopeByIdResponse" type="tns:getScopeByIdResponse"/><xs:element name="getScopeResponse" type="tns:getScopeResponse"/><xs:element name="getScopesByParentId" type="tns:getScopesByParentId"/><xs:element name="getScopesByParentIdResponse" type="tns:getScopesByParentIdResponse"/><xs:element name="getUser" type="tns:getUser"/><xs:element name="getUserById" type="tns:getUserById"/><xs:element name="getUserByIdResponse" type="tns:getUserByIdResponse"/><xs:element name="getUserResponse" type="tns:getUserResponse"/><xs:element name="getUsers" type="tns:getUsers"/><xs:element name="getUsersResponse" type="tns:getUsersResponse"/><xs:element name="grantPrivilege" type="tns:grantPrivilege"/><xs:element name="grantPrivilegeResponse" type="tns:grantPrivilegeResponse"/><xs:element name="grantPrivileges" type="tns:grantPrivileges"/><xs:element name="grantPrivilegesResponse" type="tns:grantPrivilegesResponse"/><xs:element name="grantRole" type="tns:grantRole"/><xs:element name="grantRoleResponse" type="tns:grantRoleResponse"/><xs:element name="hasPrivilege" type="tns:hasPrivilege"/><xs:element name="hasPrivilegeResponse" type="tns:hasPrivilegeResponse"/><xs:element name="isRealmUser" type="tns:isRealmUser"/><xs:element name="isRealmUserResponse" type="tns:isRealmUserResponse"/><xs:element name="isUserEnabled" type="tns:isUserEnabled"/><xs:element name="isUserEnabledResponse" type="tns:isUserEnabledResponse"/><xs:element name="listAvailableActions" type="tns:listAvailableActions"/><xs:element name="listAvailableActionsResponse" type="tns:listAvailableActionsResponse"/><xs:element name="listGrantableRoles" type="tns:listGrantableRoles"/><xs:element name="listGrantableRolesResponse" type="tns:listGrantableRolesResponse"/><xs:element name="listPrivileges" type="tns:listPrivileges"/><xs:element name="listPrivilegesResponse" type="tns:listPrivilegesResponse"/><xs:element name="listRoles" type="tns:listRoles"/><xs:element name="listRolesResponse" type="tns:listRolesResponse"/><xs:element name="listUsers" type="tns:listUsers"/><xs:element name="listUsersResponse" type="tns:listUsersResponse"/><xs:element name="login" type="tns:login"/><xs:element name="loginResponse" type="tns:loginResponse"/><xs:element name="logout" type="tns:logout"/><xs:element name="logoutResponse" type="tns:logoutResponse"/><xs:element name="removeKerberosConfiguration" type="tns:removeKerberosConfiguration"/><xs:element name="removeKerberosConfigurationResponse" type="tns:removeKerberosConfigurationResponse"/><xs:element name="removeRoleFromRoleGroup" type="tns:removeRoleFromRoleGroup"/><xs:element name="removeRoleFromRoleGroupResponse" type="tns:removeRoleFromRoleGroupResponse"/><xs:element name="revokePrivilege" type="tns:revokePrivilege"/><xs:element name="revokePrivilegeResponse" type="tns:revokePrivilegeResponse"/><xs:element name="revokePrivileges" type="tns:revokePrivileges"/><xs:element name="revokePrivilegesResponse" type="tns:revokePrivilegesResponse"/><xs:element name="revokeRole" type="tns:revokeRole"/><xs:element name="revokeRoleResponse" type="tns:revokeRoleResponse"/><xs:element name="roleExists" type="tns:roleExists"/><xs:element name="roleExistsResponse" type="tns:roleExistsResponse"/><xs:element name="sessionId" nillable="true" type="xs:string"/><xs:element name="setCurrentScope" type="tns:setCurrentScope"/><xs:element name="setCurrentScopeById" type="tns:setCurrentScopeById"/><xs:element name="setCurrentScopeByIdResponse" type="tns:setCurrentScopeByIdResponse"/><xs:element name="setCurrentScopeResponse" type="tns:setCurrentScopeResponse"/><xs:element name="setKerberosConfiguration" type="tns:setKerberosConfiguration"/><xs:element name="setKerberosConfigurationResponse" type="tns:setKerberosConfigurationResponse"/><xs:element name="setLdapConfiguration" type="tns:setLdapConfiguration"/><xs:element name="setLdapConfigurationResponse" type="tns:setLdapConfigurationResponse"/><xs:element name="updateRole" type="tns:updateRole"/><xs:element name="updateRoleResponse" type="tns:updateRoleResponse"/><xs:element name="updateUser" type="tns:updateUser"/><xs:element name="updateUserResponse" type="tns:updateUserResponse"/><xs:element name="userExists" type="tns:userExists"/><xs:element name="userExistsResponse" type="tns:userExistsResponse"/><xs:complexType name="setCurrentScope">
+<xs:sequence>
+<xs:element minOccurs="0" name="scopeName" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="setCurrentScopeResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="removeRoleFromRoleGroup">
+<xs:sequence>
+<xs:element minOccurs="0" name="role" type="xs:string"/><xs:element minOccurs="0" name="group" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="removeRoleFromRoleGroupResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="getKerberosRealm">
+<xs:sequence/></xs:complexType><xs:complexType name="getKerberosRealmResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="realm" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getScopeById">
+<xs:sequence>
+<xs:element minOccurs="0" name="scopeId" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getScopeByIdResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="scope" type="tns:scope"/></xs:sequence></xs:complexType><xs:complexType abstract="true" name="scope">
+<xs:sequence>
+<xs:element form="unqualified" name="active" type="xs:boolean"/><xs:element form="unqualified" minOccurs="0" name="category" type="xs:string"/><xs:element form="unqualified" minOccurs="0" name="description" type="xs:string"/><xs:element form="unqualified" minOccurs="0" name="displayName" type="xs:string"/><xs:element form="unqualified" minOccurs="0" name="id" type="xs:string"/><xs:element form="unqualified" name="index" type="xs:int"/><xs:element form="unqualified" minOccurs="0" name="name" type="xs:string"/><xs:element form="unqualified" minOccurs="0" name="parentId" type="xs:string"/><xs:element form="unqualified" minOccurs="0" name="pool" type="xs:string"/><xs:element form="unqualified" minOccurs="0" name="type" type="tns:scopeType"/><xs:element form="unqualified" name="variableSizeLimit" type="xs:long"/></xs:sequence></xs:complexType><xs:complexType name="createRole">
+<xs:sequence>
+<xs:element minOccurs="0" name="role" type="xs:string"/><xs:element minOccurs="0" name="displayName" type="xs:string"/><xs:element minOccurs="0" name="email" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="createRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="getRole">
+<xs:sequence>
+<xs:element minOccurs="0" name="name" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getRoleResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="group" type="ns1:Group"/></xs:sequence></xs:complexType><xs:complexType name="isUserEnabled">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="isUserEnabledResponse">
+<xs:sequence>
+<xs:element name="isUserEnabled" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="currentScope">
+<xs:sequence/></xs:complexType><xs:complexType name="currentScopeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="scope" type="tns:scope"/></xs:sequence></xs:complexType><xs:complexType name="getRolesInRoleGroup">
+<xs:sequence>
+<xs:element minOccurs="0" name="name" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getRolesInRoleGroupResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="roles" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getRoleUsers">
+<xs:sequence>
+<xs:element minOccurs="0" name="name" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getRoleUsersResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="users" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="setCurrentScopeById">
+<xs:sequence>
+<xs:element minOccurs="0" name="scopeId" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="setCurrentScopeByIdResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="enableUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="enableUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="getUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getUserResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="user" type="ns1:User"/></xs:sequence></xs:complexType><xs:complexType name="disableUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="disableUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="deleteRole">
+<xs:sequence>
+<xs:element minOccurs="0" name="role" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="deleteRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="revokePrivilege">
+<xs:sequence>
+<xs:element minOccurs="0" name="privilege" type="ns1:privilege"/></xs:sequence></xs:complexType><xs:complexType name="revokePrivilegeResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="getRoleGroups">
+<xs:sequence>
+<xs:element minOccurs="0" name="name" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getRoleGroupsResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="groups" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getGrantedRoles">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getGrantedRolesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="roles" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getUserById">
+<xs:sequence>
+<xs:element minOccurs="0" name="id" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getUserByIdResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="user" type="ns1:User"/></xs:sequence></xs:complexType><xs:complexType name="getImpliedRoles">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getImpliedRolesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="roles" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="listUsers">
+<xs:sequence/></xs:complexType><xs:complexType name="listUsersResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="users" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="revokeRole">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/><xs:element minOccurs="0" name="role" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="revokeRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="logout">
+<xs:sequence/></xs:complexType><xs:complexType name="logoutResponse">
+<xs:sequence>
+<xs:element form="unqualified" name="return" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="filterUsers">
+<xs:sequence>
+<xs:element minOccurs="0" name="filter" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="filterUsersResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="users" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getUsers">
+<xs:sequence/></xs:complexType><xs:complexType name="getUsersResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="users" type="ns1:User"/></xs:sequence></xs:complexType><xs:complexType name="roleExists">
+<xs:sequence>
+<xs:element minOccurs="0" name="name" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="roleExistsResponse">
+<xs:sequence>
+<xs:element name="roleExists" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="addRoleToRoleGroup">
+<xs:sequence>
+<xs:element minOccurs="0" name="role" type="xs:string"/><xs:element minOccurs="0" name="group" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="addRoleToRoleGroupResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="listPrivileges">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="targets" type="xs:string"/><xs:element minOccurs="0" name="action" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="listPrivilegesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="privileges" type="ns1:privilege"/></xs:sequence></xs:complexType><xs:complexType name="isRealmUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="isRealmUserResponse">
+<xs:sequence>
+<xs:element name="isRealmUser" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="userExists">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="userExistsResponse">
+<xs:sequence>
+<xs:element name="userExists" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="filterNewUsers">
+<xs:sequence>
+<xs:element minOccurs="0" name="filter" type="xs:string"/><xs:element minOccurs="0" name="sinceDate" type="xs:dateTime"/></xs:sequence></xs:complexType><xs:complexType name="filterNewUsersResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="users" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getLdapConfiguration">
+<xs:sequence/></xs:complexType><xs:complexType name="getLdapConfigurationResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="ldapConfig" type="tns:ldapConfig"/></xs:sequence></xs:complexType><xs:complexType name="ldapConfig">
+<xs:sequence>
+<xs:element name="active" type="xs:boolean"/><xs:element minOccurs="0" name="adminGroupFilter" type="xs:string"/><xs:element minOccurs="0" name="authenticationMode" type="tns:ldapAuthenticationMode"/><xs:element minOccurs="0" name="authenticationType" type="tns:ldapAuthenticationType"/><xs:element minOccurs="0" name="baseDN" type="xs:string"/><xs:element minOccurs="0" name="host" type="xs:string"/><xs:element minOccurs="0" name="password" type="xs:string"/><xs:element name="port" type="xs:int"/><xs:element minOccurs="0" name="principalDN" type="xs:string"/><xs:element minOccurs="0" name="publisherGroupFilter" type="xs:string"/><xs:element minOccurs="0" name="saslMechanism" type="xs:string"/><xs:element minOccurs="0" name="userContainerRDN" type="xs:string"/><xs:element minOccurs="0" name="userGroupFilter" type="xs:string"/><xs:element minOccurs="0" name="userSearchFilter" type="xs:string"/><xs:element minOccurs="0" name="username" type="xs:string"/><xs:element minOccurs="0" name="viewerGroupFilter" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="login">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/><xs:element minOccurs="0" name="password" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="sessionId" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="clearPrivileges">
+<xs:sequence>
+<xs:element minOccurs="0" name="target" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="clearPrivilegesResponse">
+<xs:sequence>
+<xs:element form="unqualified" name="return" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="getRoleById">
+<xs:sequence>
+<xs:element minOccurs="0" name="id" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getRoleByIdResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="group" type="ns1:Group"/></xs:sequence></xs:complexType><xs:complexType name="getScopesByParentId">
+<xs:sequence>
+<xs:element minOccurs="0" name="parentScopeId" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getScopesByParentIdResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="scopes" type="tns:scope"/></xs:sequence></xs:complexType><xs:complexType name="revokePrivileges">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="privileges" type="ns1:privilege"/></xs:sequence></xs:complexType><xs:complexType name="revokePrivilegesResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="removeKerberosConfiguration">
+<xs:sequence/></xs:complexType><xs:complexType name="removeKerberosConfigurationResponse">
+<xs:sequence>
+<xs:element form="unqualified" name="return" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="listRoles">
+<xs:sequence/></xs:complexType><xs:complexType name="listRolesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="roles" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="setLdapConfiguration">
+<xs:sequence>
+<xs:element minOccurs="0" name="ldapConfig" type="tns:ldapConfig"/></xs:sequence></xs:complexType><xs:complexType name="setLdapConfigurationResponse">
+<xs:sequence>
+<xs:element form="unqualified" name="return" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="grantRole">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/><xs:element minOccurs="0" name="role" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="grantRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="updateRole">
+<xs:sequence>
+<xs:element minOccurs="0" name="role" type="xs:string"/><xs:element minOccurs="0" name="displayName" type="xs:string"/><xs:element minOccurs="0" name="email" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="updateRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="getRoles">
+<xs:sequence/></xs:complexType><xs:complexType name="getRolesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="roles" type="ns1:Group"/></xs:sequence></xs:complexType><xs:complexType name="listAvailableActions">
+<xs:sequence>
+<xs:element minOccurs="0" name="target" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="listAvailableActionsResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="actions" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="grantPrivilege">
+<xs:sequence>
+<xs:element minOccurs="0" name="privilege" type="ns1:privilege"/></xs:sequence></xs:complexType><xs:complexType name="grantPrivilegeResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="setKerberosConfiguration">
+<xs:sequence>
+<xs:element minOccurs="0" name="serverName" type="xs:string"/><xs:element minOccurs="0" name="realm" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="setKerberosConfigurationResponse">
+<xs:sequence>
+<xs:element form="unqualified" name="return" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="grantPrivileges">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="privileges" type="ns1:privilege"/></xs:sequence></xs:complexType><xs:complexType name="grantPrivilegesResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="createUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/><xs:element minOccurs="0" name="password" type="xs:string"/><xs:element minOccurs="0" name="displayName" type="xs:string"/><xs:element minOccurs="0" name="email" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="createUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="updateUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/><xs:element minOccurs="0" name="displayName" type="xs:string"/><xs:element minOccurs="0" name="email" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="updateUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="listGrantableRoles">
+<xs:sequence/></xs:complexType><xs:complexType name="listGrantableRolesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="roles" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="hasPrivilege">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/><xs:element minOccurs="0" name="target" type="xs:string"/><xs:element minOccurs="0" name="action" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="hasPrivilegeResponse">
+<xs:sequence>
+<xs:element name="hasPrivilege" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="changePassword">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/><xs:element minOccurs="0" name="oldPassword" type="xs:string"/><xs:element minOccurs="0" name="newPassword" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="changePasswordResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:complexType name="getScope">
+<xs:sequence>
+<xs:element minOccurs="0" name="scopeType" type="tns:scopeType"/><xs:element minOccurs="0" name="name" type="xs:string"/><xs:element minOccurs="0" name="parentScopeId" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="getScopeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="scope" type="tns:scope"/></xs:sequence></xs:complexType><xs:complexType name="getKerberosServerName">
+<xs:sequence/></xs:complexType><xs:complexType name="getKerberosServerNameResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="serverName" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="deleteUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="username" type="xs:string"/></xs:sequence></xs:complexType><xs:complexType name="deleteUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"/></xs:sequence></xs:complexType><xs:simpleType name="scopeType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="GLOBAL"/><xs:enumeration value="TENANT"/><xs:enumeration value="ENV"/></xs:restriction></xs:simpleType><xs:simpleType name="ldapAuthenticationMode">
+<xs:restriction base="xs:string">
+<xs:enumeration value="compose"/><xs:enumeration value="search"/></xs:restriction></xs:simpleType><xs:simpleType name="ldapAuthenticationType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="none"/><xs:enumeration value="simple"/><xs:enumeration value="sasl"/></xs:restriction></xs:simpleType></xs:schema></include></document>
